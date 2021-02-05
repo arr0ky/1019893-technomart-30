@@ -1,0 +1,459 @@
+/* Variables */
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-dark-blue: #293449;
+  --basic-dark-grey: #3d546f;
+  --basic-grey: #a9a9a9;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #f1f5f7;
+  --basic-red: #ee3643;
+  --red-hover: #ca2c37;
+  --basic-extra-light: #f9f5f0;
+  --green-hover: #5fbb2d;
+  --basic-green: #63a63e;
+  --hover-main-menu: #1d2739;
+  --dark-blue: #32425c;
+  --red-active: #ba2732;
+  --features-orange: #ffbf47;
+  --features-orange-second: #ffc047;
+  --yellow: #ffd180;
+  --features-blue: #3bbce3;
+  --features-purple: #dc91d8;
+  --features-light-green: #8ed78f;
+  --social-background: #212a3a;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum bold";
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum italic";
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Pt Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pt Sans bold";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Buttons */
+
+.button {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.button:hover {
+  background-color: var(--red-hover);
+}
+
+.button:active {
+  background-color: var(--red-active);
+}
+
+/* Titles */
+
+.title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/* Text */
+
+.text {
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+/* Hidden */
+
+.hidden {
+  display: none;
+}
+
+/* Body */
+
+.page-body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+/* Header */
+
+.main-header-top {
+  background-color: var(--basic-dark-blue);
+}
+
+.main-header-logo {
+  background-color: var(--basic-red);
+}
+
+.main-header-search {
+  background-color: var(--basic-dark-blue);
+  border: none;
+}
+
+.main-header-search:focus {
+  background-color: var(--basic-white);
+}
+
+.main-header-search::placeholder {
+  color: var(--basic-white);
+}
+
+.top-header-link {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.top-header-link:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Top header button */
+
+.top-header-button {
+  background-color: var(--basic-green);
+}
+
+.top-header-button:hover {
+  background-color: var(--green-hover);
+}
+
+.top-header-button:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--basic-green);
+}
+
+/* Header middle line */
+
+.main-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.main-header-contacts {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--dark-blue);
+}
+
+.header-telephone {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+/* User navigation */
+
+.login-link,
+.registration-link {
+  font-size: 21px;
+  line-height: 21px;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.login-link:hover,
+.registration-link:hover {
+  color: var(--basic-red);
+}
+
+.login-link:active,
+.registration-link:active {
+  color: var(--basic-greylight);
+}
+
+/* All ul */
+
+.main-navigation-list,
+.features-list,
+.gallery-list,
+.popular-goods-list,
+.popular-manufacturers-list,
+.services-list,
+.description-list,
+.about-list,
+.footer-sections-navigation,
+.social-links-list {
+  list-style: none;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  background-color: var(--dark-blue);
+}
+
+.navigation-link:hover {
+  background-color: var(--hover-main-menu);
+}
+
+.navigation-link {
+  display: block;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.navigation-link:active {
+  opacity: 0.5;
+}
+
+/* Main */
+/* Features */
+
+.item-features-title,
+.item-features-link {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.item-features-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.item-features-link {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.features-item-materials {
+  background-color: var(--features-orange);
+}
+
+.features-item-instruments {
+  background-color: var(--features-blue);
+}
+
+.features-item-technics {
+  background-color: var(--features-purple);
+}
+
+.features-item-discounts {
+  background-color: var(--features-light-green);
+}
+
+.features-item-delivery {
+  background-color: var(--features-orange-second);
+}
+
+/* Gallery */
+
+.gallery-item {
+  background-color: grey;
+}
+
+.item-gallery-title,
+.item-gallery-text,
+.item-gallery-link {
+  color: var(--basic-white);
+}
+
+.item-gallery-title {
+  font-weight: 200;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.item-gallery-link {
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+/* Popular goods */
+
+.popular-goods-title {
+  padding-top: 29px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  background-color: var(--basic-extra-light);
+}
+
+.popular-goods-button {
+  color: var(--basic-white);
+}
+
+/* Catalog list */
+
+.popular-goods-list {
+  font-family: "Pt Sans", sans-serif;
+}
+
+.item-goods-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.item-goods-old-price {
+  font-weight: 700;
+  text-decoration: line-through;
+  color: var(--basic-grey);
+}
+
+.item-goods-price {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/* Popular manufacturers */
+
+.popular-manufacturers-title {
+  color: var(--dark-blue);
+}
+
+.popular-manufacturers-item {
+  background-color: var(--basic-white);
+}
+
+/* Services */
+
+.services-item {
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--dark-blue);
+}
+
+.services-item:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.services-item:active {
+  color: var(--dark-blue);
+  background-color: var(--basic-white);
+}
+
+.description-title {
+  color: var(--dark-blue);
+}
+
+/* Contacts */
+
+/* Footer top */
+
+.footer-top {
+  color: var(--basic-background);
+  background-color: var(--dark-blue);
+}
+
+/* Main navigaton */
+
+.footer-navigation-list {
+  list-style: none;
+}
+
+.footer-navigation-item {
+  background-color: var(--dark-blue);
+}
+
+.footer-navigation-link {
+  text-decoration: none;
+  color: var(--basic-background);
+}
+
+/* Section navigation */
+
+.sections-navigation-link {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+/* Footer navigation conditions */
+
+.footer-navigation-link:hover,
+.sections-navigation-link:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-link:active,
+.sections-navigation-link:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* Footer telephone */
+
+.footer-telephone {
+  text-decoration: none;
+  color: var(--basic-background);
+}
+
+/* Footer bottom */
+
+.footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-dark-blue);
+}
+
+.footer-feedback,
+.footer-developer {
+  text-decoration: none;
+  color: var(--yellow);
+}
