@@ -452,6 +452,35 @@
   background-color: var(--basic-dark-blue);
 }
 
+/* Footer social */
+
+.social-links-link {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: var(--social-background);
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  color: #fff;
+}
+
+.vkontakte {
+  background-image: url(../img/icons/icon-vk.svg);
+  background-size: 25px 14px;
+}
+
+.facebook {
+  background-image: url(../img/icons/icon-fb.svg);
+  background-size: 12px 22px;
+}
+
+.instagram {
+  background-image: url(../img/icons/icon-insta.svg);
+  background-size: 21px 21px;
+}
+
 .footer-feedback,
 .footer-developer {
   text-decoration: none;
