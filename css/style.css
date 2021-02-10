@@ -22,6 +22,8 @@
   --features-purple: #dc91d8;
   --features-light-green: #8ed78f;
   --social-background: #212a3a;
+  --filter-background: #F7F3EC;
+  --border-grey: #E5E5E5;
 }
 
 @font-face {
@@ -109,6 +111,33 @@
   display: none;
 }
 
+/* Images */
+
+.image {
+  display: block;
+}
+
+/* All ul */
+
+.main-navigation-list,
+.features-list,
+.gallery-list,
+.popular-goods-list,
+.popular-manufacturers-list,
+.services-list,
+.description-list,
+.about-list,
+.footer-sections-navigation,
+.social-links-list,
+/* CATALOG */
+.user-navigation-list,
+.breadcrumbs-list,
+.filter-list,
+.goods-list,
+.pagination-list {
+  list-style: none;
+}
+
 /* Body */
 
 .page-body {
@@ -129,8 +158,13 @@
   background-color: var(--basic-dark-blue);
 }
 
-.main-header-logo {
-  background-color: var(--basic-red);
+.logo {
+  background-color: var(--red-hover);
+}
+
+.logo-image {
+  background: var(--basic-red);
+  padding: 21px;
 }
 
 .main-header-search {
@@ -212,21 +246,6 @@
 .login-link:active,
 .registration-link:active {
   color: var(--basic-greylight);
-}
-
-/* All ul */
-
-.main-navigation-list,
-.features-list,
-.gallery-list,
-.popular-goods-list,
-.popular-manufacturers-list,
-.services-list,
-.description-list,
-.about-list,
-.footer-sections-navigation,
-.social-links-list {
-  list-style: none;
 }
 
 /* Main navigation */
@@ -481,8 +500,154 @@
   background-size: 21px 21px;
 }
 
+/* Footer feedback and dev */
+
 .footer-feedback,
 .footer-developer {
   text-decoration: none;
   color: var(--yellow);
+}
+
+/* CATALOG STYLES */
+
+.catalog-title {
+  padding-top: 29px;
+  padding-bottom: 30px;
+  color: var(--dark-blue);
+  background-color: var(--basic-background);
+}
+
+.aside,
+.sorting,
+.goods,
+.pagination {
+  font-family: "Pt Sans", sans-serif;
+}
+
+/* Aside, sorting*/
+
+.aside,
+.sorting {
+  text-transform: uppercase;
+}
+
+.aside-title,
+.sorting-title {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  font-weight: 400;
+}
+
+.aside-title,
+.sorting,
+.filter-price {
+  background-color: var(--filter-background);
+}
+
+.fieldset {
+  border: none;
+}
+
+.filter-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter-label {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.filter-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  border: solid 1px var(--border-grey);
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  cursor: pointer;
+}
+
+/* Sorting */
+
+.sorting-button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-bottom: dashed 1px var(--basic-red);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-button:hover {
+  opacity: 1;
+  color: var(--basic-black);
+  border-bottom: solid 1px var(--basic-red);
+}
+
+.sorting-button:active {
+  border: none;
+  color: var(--basic-red);
+}
+
+/* Goods */
+
+.goods {
+  font-family: "Pt Sans", sans-serif;
+}
+
+.goods-grid {
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  column-gap: 20px;
+  row-gap: 18px;
+}
+
+.goods-item {
+  text-align: center;
+}
+
+.good-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+/* Pagination */
+
+.pagination-link {
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: var(--basic-black);
+  border: solid 1px var(--border-grey);
+  border-radius: 2px;
+}
+
+.pagination-link-active {
+  background-color: var(--basic-red);
+  border: solid 1px var(--basic-red);
+}
+
+.pagination-link:hover {
+  border: solid 1px var(--basic-greylight);
+}
+
+.pagination-link:active {
+  border: solid 1px var(--basic-red);
+}
+
+/* Perforator description */
+
+.perforator-description {
+  padding-top: 64px;
+  background-color: var(--basic-background);
 }
