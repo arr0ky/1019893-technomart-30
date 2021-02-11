@@ -24,6 +24,7 @@
   --social-background: #212a3a;
   --filter-background: #F7F3EC;
   --border-grey: #E5E5E5;
+  --border-popular: #eaeaea;
 }
 
 @font-face {
@@ -77,6 +78,7 @@
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  border: none;
 }
 
 .button:hover {
@@ -135,7 +137,15 @@
 .filter-list,
 .goods-list,
 .pagination-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+/* html */
+
+.page {
+  height: 100%;
 }
 
 /* Body */
@@ -154,8 +164,18 @@
 
 /* Header */
 
+.main-header {
+  padding-bottom: 60px;
+  margin-bottom: 59px;
+  background-color: var(--basic-background);
+}
+
 .main-header-top {
   background-color: var(--basic-dark-blue);
+}
+
+.main-header-logo {
+  margin-bottom: -6px;
 }
 
 .logo {
@@ -166,6 +186,7 @@
   background: var(--basic-red);
   padding: 21px;
 }
+
 
 .main-header-search {
   background-color: var(--basic-dark-blue);
@@ -180,6 +201,8 @@
   color: var(--basic-white);
 }
 
+/* Top header */
+
 .top-header-link {
   text-decoration: none;
   color: var(--basic-white);
@@ -188,8 +211,6 @@
 .top-header-link:active {
   color: rgba(255, 255, 255, 0.5);
 }
-
-/* Top header button */
 
 .top-header-button {
   background-color: var(--basic-green);
@@ -231,11 +252,40 @@
 /* User navigation */
 
 .login-link,
-.registration-link {
+.registration-link,
+.user-name {
   font-size: 21px;
   line-height: 21px;
   text-decoration: none;
   color: var(--basic-black);
+}
+
+.user-name {
+  background-color: var(--basic-white);
+  cursor: pointer;
+}
+
+.user-name:active {
+  color: var(--basic-greylight);
+}
+
+.orders-link,
+.lk-link {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.orders-link:hover,
+.lk-link:hover {
+  color: var(--basic-red);
+}
+
+.logout-link:active,
+.orders-link:active,
+.lk-link:active {
+  color: var(--basic-greylight);
 }
 
 .login-link:hover,
@@ -250,11 +300,11 @@
 
 /* Main navigation */
 
-.main-navigation {
+.main-navigation-wrapper {
   background-color: var(--dark-blue);
 }
 
-.navigation-link:hover {
+.main-navigation-list .navigation-link:hover {
   background-color: var(--hover-main-menu);
 }
 
@@ -268,8 +318,21 @@
   opacity: 0.5;
 }
 
-/* Main */
+/* MAIN CONTENT */
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+  height: 100%;
+}
+
 /* Features */
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
 .item-features-title,
 .item-features-link {
@@ -312,8 +375,22 @@
 
 /* Gallery */
 
-.gallery-item {
-  background-color: grey;
+.features-gallery {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.gallery-image {
+  background-color: #72604C;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure-text-block {
+  position: absolute;
+  margin-left: 24px;
 }
 
 .item-gallery-title,
@@ -322,10 +399,21 @@
   color: var(--basic-white);
 }
 
+
 .item-gallery-title {
-  font-weight: 200;
+  margin: 0;
+  padding-top: 23px;
+  padding-bottom: 5px;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  text-transform: uppercase;
+}
+
+.item-gallery-text {
+  margin: 0;
+  margin-bottom: 113px;
+  padding-top: 0;
 }
 
 .item-gallery-link {
@@ -336,7 +424,8 @@
 
 /* Popular goods */
 
-.popular-goods-title {
+.popular-goods-title,
+.popular-manufacturers-title {
   padding-top: 29px;
   padding-bottom: 30px;
   font-weight: 400;
@@ -354,7 +443,14 @@
 /* Catalog list */
 
 .popular-goods-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   font-family: "Pt Sans", sans-serif;
+}
+
+.item-goods {
+  border: solid 1px var(--border-popular);
 }
 
 .item-goods-title {
@@ -381,11 +477,21 @@
 
 /* Popular manufacturers */
 
+.popular-manufacturers-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .popular-manufacturers-title {
   color: var(--dark-blue);
 }
 
 .popular-manufacturers-item {
+  border: solid 1px var(--border-popular);
+}
+
+.popular-manufacturers-link {
   background-color: var(--basic-white);
 }
 
@@ -410,6 +516,8 @@
 .description-title {
   color: var(--dark-blue);
 }
+
+/* About */
 
 /* Contacts */
 
@@ -600,7 +708,7 @@
   font-family: "Pt Sans", sans-serif;
 }
 
-.goods-grid {
+.goods-list {
   display: grid;
   grid-template-columns: 220px 220px 220px;
   column-gap: 20px;
