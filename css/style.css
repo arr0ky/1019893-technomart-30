@@ -270,7 +270,7 @@
 }
 
 .search-input:focus+.search-icon-image path {
-  fill: red;
+  fill: var(--basic-red);
 }
 
 .search-input::placeholder {
