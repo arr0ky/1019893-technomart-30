@@ -237,6 +237,7 @@
 }
 
 .search {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -254,17 +255,11 @@
   outline: none;
 }
 
-.search {
-  position: relative;
-}
-
-.search::before {
+.search-icon-image {
   position: absolute;
   content: "";
   top: 11px;
   left: 18px;
-  width: 17px;
-  height: 17px;
   background-image: url(../img/icons/icon-search.svg);
   background-repeat: no-repeat;
   z-index: 1;
@@ -272,6 +267,10 @@
 
 .search-input:focus {
   background-color: var(--basic-white);
+}
+
+.search-input:focus+.search-icon-image path {
+  fill: red;
 }
 
 .search-input::placeholder {
