@@ -511,6 +511,11 @@
   fill: var(--dark-blue);
 }
 
+.user-link:active .user-icon path,
+.logout-link:active .logout-icon path {
+  fill: var(--basic-greylight);
+}
+
 .user-navigation {
   display: flex;
   flex-direction: column;
