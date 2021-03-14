@@ -15,6 +15,7 @@
   --dark-blue: #32425c;
   --basic-dark-grey: #3d546f;
   --features-blue: #3bbce3;
+  --dash: #444444;
   --toggle-background: #ababab;
   --basic-grey: #a9a9a9;
   --filter-checkbox-hover: #b5b5b5;
@@ -576,6 +577,7 @@
 .main-navigation-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -590,6 +592,7 @@
 
 .navigation-link {
   display: block;
+  padding: 10px;
   padding-top: 16px;
   padding-bottom: 20px;
   text-align: center;
@@ -1050,6 +1053,10 @@
   flex-shrink: 0;
 }
 
+.footer {
+  margin: 0;
+}
+
 /* Footer top */
 
 .footer-top-wrapper {
@@ -1361,8 +1368,8 @@
   background-repeat: no-repeat;
 }
 
-.check-input:checked:disabled+.check,
 .check-input:disabled+.check,
+.check-input:checked:disabled+.check,
 .radio-input:disabled+.radio-label,
 .radio-input:checked:disabled+.radio-label {
   opacity: 0.4;
@@ -1391,6 +1398,35 @@
   background-color: var(--basic-white);
   background-image: url(../img/icons/radio-on.svg);
   background-repeat: no-repeat;
+}
+
+.check-input:hover+.check::before {
+  background-image: url(../img/icons/checkbox-off-hover.svg);
+}
+
+.check-input:checked:hover+.check::after {
+  background-image: url(../img/icons/checkbox-on-hover.svg);
+}
+
+.radio-input:hover+.radio-label::before {
+  background-image: url(../img/icons/radio-off-hover.svg);
+}
+
+.radio-input:checked:hover+.radio-label::after {
+  background-image: url(../img/icons/radio-on-hover.svg);
+}
+
+.check-input:focus {
+  margin-top: -1px;
+  margin-left: -2px;
+  padding: 14px;
+  padding-bottom: 8px;
+}
+
+.radio-input:focus {
+  width: 26px;
+  height: 23px;
+  margin-top: -2px;
 }
 
 .filter-button {
@@ -1457,6 +1493,14 @@
   text-align: center;
 }
 
+.dash {
+  width: 10px;
+  height: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: var(--dash);
+}
+
 /* Breadcrumbs */
 
 .breadcrumbs-list {
@@ -1487,12 +1531,10 @@
   background-image: url(../img/icons/icon-right-small.svg);
 }
 
-.breadcrumbs-item:last-child {
+.breadcrumbs-item:last-child,
+.breadcrumbs-item:last-child::after {
   margin-right: 0;
-}
-
-.breadcrumbs-current::after {
-  display: none;
+  background-image: none;
 }
 
 /* Sorting */
@@ -1512,6 +1554,7 @@
 .sorting-buttons-block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   flex-basis: 465px;
 }
 

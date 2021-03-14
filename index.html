@@ -347,20 +347,21 @@
             <div class="services-list-wrapper">
               <ul class="services-list">
                 <li class="services-item">
-                  <label class="services-button">Доставка</label>
+                  <label class="services-button" for="description-item-delivery">Доставка</label>
                 </li>
                 <li class="services-item">
-                  <label class="services-button">Гарантия</label>
+                  <label class="services-button" for="description-item-guarantee">Гарантия</label>
                 </li>
                 <li class="services-item">
-                  <label class="services-button">Кредит</label>
+                  <label class="services-button" for="description-item-credit">Кредит</label>
                 </li>
               </ul>
             </div>
 
             <div class="services-description-wrapper">
               <ul class="description-list">
-                <li class="description-item description-item-delivery ">
+                <li class="description-item description-item-delivery description-item-current"
+                  id="description-item-delivery">
                   <div class="description-text-block">
                     <h3 class="description-title title">Доставка</h3>
                     <p class="text">
@@ -370,9 +371,8 @@
                       Ведь мы&nbsp;неплохо заработаем, поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!
                     </p>
                   </div>
-                  <!-- <img class="delivery-image image" src="img/services/services_delivery.png" alt="" /> -->
                 </li>
-                <li class="description-item description-item-guarantee ">
+                <li class="description-item description-item-guarantee" id="description-item-guarantee">
                   <div class="description-text-block">
                     <h3 class="description-title title">Гарантия</h3>
                     <p class="text">
@@ -382,9 +382,8 @@
                       Мы&nbsp;обменяем сгоревший товар на&nbsp;новый. Дом уж&nbsp;восстановите как-нибудь сами.
                     </p>
                   </div>
-                  <!-- <img class="guarantee-image image" src="img/services/services_guarantee.png" alt="" /> -->
                 </li>
-                <li class="description-item description-item-credit description-item-current">
+                <li class="description-item description-item-credit" id="description-item-credit">
                   <div class="description-text-block">
                     <h3 class="description-title title">Кредит</h3>
                     <p class="text">
@@ -397,7 +396,6 @@
                   <button class="description-button button" type="button">
                     Отправить заявку
                   </button>
-                  <!-- <img class="credit-image image" src="img/services/services_credit.png" alt="" /> -->
                 </li>
               </ul>
             </div>
@@ -561,7 +559,7 @@
 
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form class="feedback-form" method="GET">
+    <form class="feedback-form" method="POST">
       <div class="id-block">
         <div>
           <label class="feedback-name feedback-title" for="name">Ваше имя:</label>
@@ -592,6 +590,7 @@
     </iframe>
     <button class="modal-close" aria-label="Закрыть"></button>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
