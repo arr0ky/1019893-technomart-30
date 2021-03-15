@@ -1846,6 +1846,10 @@
   z-index: 100;
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-close {
   position: absolute;
   content: "";
@@ -1945,7 +1949,6 @@
 }
 
 .modal-map {
-  top: auto;
   bottom: 352px;
   width: 943px;
   padding: 0;
