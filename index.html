@@ -20,7 +20,8 @@
           <img class="logo-image" src="img/logo/logo.svg" alt="Логотип Техномарт" width="108" height="18" />
         </a>
         <form class="search" action="#" method="GET">
-          <input class="search-input" type="text" placeholder="Поиск:" />
+          <input class="search-input" type="text" placeholder="Поиск:" id="search" />
+          <label class="visually-hidden" for="search">Поиск:</label>
           <svg class="search-icon-image" width="17" height="17" viewBox="0 0 17 17" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -227,7 +228,7 @@
         <ul class="popular-goods-list">
           <li class="goods-item">
             <a class="good-link" href="#">
-              <img class="good-image image" src="img/goods/BOSCH_bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000"
+              <img class="good-image image" src="img/goods/bosch_bfg_9000.jpg" alt="Перфоратор BOSCH BFG 9000"
                 width="184" height="164" />
             </a>
             <div class="good-buttons-block">
@@ -243,7 +244,8 @@
           <li class="goods-item">
             <span class="new"></span>
             <a class="good-link" href="#">
-              <img class="good-image image" src="img/goods/BOSCH_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112" />
+              <img class="good-image image" src="img/goods/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000"
+                width="127" height="112" />
             </a>
             <div class=" good-buttons-block">
               <button class="good-button good-button-buy button">Купить</button>
@@ -257,7 +259,8 @@
           </li>
           <li class="goods-item">
             <a class="good-link" href="#">
-              <img class="good-image image" src="img/goods/BOSCH_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128"/>
+              <img class="good-image image" src="img/goods/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000"
+                width="144" height="128" />
             </a>
             <div class=" good-buttons-block">
               <button class="good-button good-button-buy button">Купить</button>
@@ -272,7 +275,8 @@
           <li class="goods-item">
             <span class="new"></span>
             <a class="good-link" href="">
-              <img class="good-image image" src="img/goods/BOSCH_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112"/>
+              <img class="good-image image" src="img/goods/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000"
+                width="127" height="112" />
             </a>
             <div class="good-buttons-block">
               <button class="good-button good-button-buy button">Купить</button>
@@ -295,42 +299,43 @@
         <ul class="popular-manufacturers-list">
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/bosch.png" alt=" Логотип Bosch" width="126" height="37"/>
+              <img class="image" src="img/manufacturers/bosch.png" alt=" Логотип Bosch" width="126" height="37" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/Makita.png" alt="Логотип Makita"  width="123" height="40"/>
+              <img class="image" src="img/manufacturers/Makita.png" alt="Логотип Makita" width="123" height="40" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/DeWALT.png" alt="Логотип Dewalt"  width="146" height="44"/>
+              <img class="image" src="img/manufacturers/DeWALT.png" alt="Логотип Dewalt" width="146" height="44" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/interskol.png" alt="Логотип Интерскол"  width="200" height="75"/>
+              <img class="image" src="img/manufacturers/interskol.png" alt="Логотип Интерскол" width="200"
+                height="75" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/Hitachi.png" alt="Логотип Hitachi"  width="169" height="31"/>
+              <img class="image" src="img/manufacturers/Hitachi.png" alt="Логотип Hitachi" width="169" height="31" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/LG.png" alt="Логотип Lg"  width="121" height="73"/>
+              <img class="image" src="img/manufacturers/LG.png" alt="Логотип Lg" width="121" height="73" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/AEG.png" alt="Логотип Aeg"  width="151" height="96"/>
+              <img class="image" src="img/manufacturers/AEG.png" alt="Логотип Aeg" width="151" height="96" />
             </a>
           </li>
           <li class="popular-manufacturers-item">
             <a class="popular-manufacturers-link" href="#">
-              <img class="image" src="img/manufacturers/Metabo.png" alt="Логотип Metabo"  width="204" height="69"/>
+              <img class="image" src="img/manufacturers/Metabo.png" alt="Логотип Metabo" width="204" height="69" />
             </a>
           </li>
         </ul>
@@ -365,8 +370,7 @@
 
             <div class="services-description-wrapper">
               <ul class="description-list">
-                <li class="description-item description-item-delivery "
-                  id="description-item-delivery">
+                <li class="description-item description-item-delivery " id="description-item-delivery">
                   <div class="description-text-block">
                     <h3 class="description-title title">Доставка</h3>
                     <p class="text">
@@ -377,7 +381,8 @@
                     </p>
                   </div>
                 </li>
-                <li class="description-item description-item-guarantee description-item-current" id="description-item-guarantee">
+                <li class="description-item description-item-guarantee description-item-current"
+                  id="description-item-guarantee">
                   <div class="description-text-block">
                     <h3 class="description-title title">Гарантия</h3>
                     <p class="text">
@@ -435,8 +440,8 @@
           <p class="text">Вы&nbsp;можете забрать товар сами, заехав в&nbsp;наш офис:</p>
           <div class="contacts-map">
             <img src="img/icons/map.png"
-              alt="Вы можете забрать товар сами, по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
-              tabindex="0" width="300" height="158">
+              alt="Вы можете забрать товар сами, по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" tabindex="0"
+              width="300" height="158">
           </div>
           <button class="contacts-button button" type="button">
             Заблудились? Напишите нам!
@@ -451,7 +456,7 @@
       <div class="container">
         <div class="footer-top-inner">
           <a class="footer-logo logo">
-            <img class="logo-image" src="img/logo/logo.svg" alt="Логотип «Техномарт»"  width="137" height="22"/>
+            <img class="logo-image" src="img/logo/logo.svg" alt="Логотип «Техномарт»" width="137" height="22" />
           </a>
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
